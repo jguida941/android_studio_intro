@@ -1,8 +1,8 @@
-# Android Studio Intro - Justin Guida
+# Android Studio Intro by Justin Guida
 
 A simple school assignment for an intro Android development course. The goal of
 this module was to get familiar with **Android Studio** and the **Layout Editor**
-by building a basic screen - no app logic, just the layout.
+by building a basic screen, no app logic, just the layout.
 
 ## What it is
 

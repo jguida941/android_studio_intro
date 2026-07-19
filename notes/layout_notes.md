@@ -1,6 +1,6 @@
-# Android Layout Notes - Gravity & Text/Strings
+# Android Layout Notes: Gravity & Text/Strings
 
-## Gravity - what it does
+## Gravity: what it does
 
 `gravity` controls **where content sits inside a view/container**. You give it a
 position keyword and it pushes the content there.
@@ -26,7 +26,7 @@ So:
   ```
   → sits at the bottom, centered across the width.
 
-### The two flavors - this trips people up
+### The two flavors (this trips people up)
 
 - **`android:gravity`** → positions the **content INSIDE** this view.
   (e.g. on a TextView, it moves the *text* inside the box.)
@@ -69,7 +69,7 @@ Rule of thumb:
 Do this in the Design editor (not the XML):
 
 1. In the **Component Tree**, click the **`LinearLayout`** (the root/container that
-   holds everything - NOT the button or text).
+   holds everything, NOT the button or text).
 2. In the **Attributes** panel, find **`gravity`** (use the search box, type `gravity`).
 3. Expand the `gravity` row (click the little arrow ▸) and check:
    - **`center_horizontal`** (centers left-to-right)
@@ -77,7 +77,7 @@ Do this in the Design editor (not the XML):
 4. Both checked = dead center of the screen.
 
 > Note: `center_horizontal` + `center_vertical` together = the same as just `center`.
-> If it stays stuck at the bottom, make sure **`bottom` is UNCHECKED** - bottom
+> If it stays stuck at the bottom, make sure **`bottom` is UNCHECKED**, bottom
 > overrides center_vertical.
 
 ---
@@ -97,7 +97,7 @@ layout_gravity      -> the view inside its parent
 
 ---
 
-## Colors - changing view colors
+## Colors: changing view colors
 
 ### Button's purple (filled) color
 
@@ -109,7 +109,7 @@ layout_gravity      -> the view inside its parent
 
 Use **`backgroundTint`**, NOT `background`, because Material-style buttons
 normally get their filled color through a **background tint** or the **app
-theme** - setting `background` directly can override/break the Material styling.
+theme**, setting `background` directly can override/break the Material styling.
 
 ### Other color controls
 
@@ -131,5 +131,5 @@ across multiple views instead of repeating the same hex value everywhere.
 Reference them as `@color/name`.
 
 **Refs:**
-- MaterialButton API - https://developer.android.com/reference/com/google/android/material/button/MaterialButton
-- Resources guide - https://developer.android.com/guide/topics/resources/drawable-resource
+- MaterialButton API, https://developer.android.com/reference/com/google/android/material/button/MaterialButton
+- Resources guide, https://developer.android.com/guide/topics/resources/drawable-resource

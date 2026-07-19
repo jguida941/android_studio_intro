@@ -1,14 +1,14 @@
-# Android Studio - Reflection and Challenges
+# Android Studio: Reflection and Challenges
 
 **Justin Guida**
 
 ## Screenshots
 
-**Layout Editor - activity_main.xml (Button, Plain Text, TextView):**
+**Layout Editor, activity_main.xml (Button, Plain Text, TextView):**
 
 ![App layout preview](images/layout-preview.png)
 
-**Component Tree - the three objects and their IDs:**
+**Component Tree, the three objects and their IDs:**
 
 ![Component Tree](images/component-tree.png)
 
@@ -24,7 +24,7 @@ confirm it was actually working and not frozen.
 
 The biggest challenge I ran into was **getting the button centered in the middle
 of the screen**. At first nothing I did seemed to move it. I eventually learned
-that centering is not done on the button itself - you have to select the root
+that centering is not done on the button itself, you have to select the root
 **LinearLayout** in the Component Tree and change its **gravity** value. Once I
 unchecked `bottom` and set `gravity` to `center` (or checked `center_horizontal`
 and `center_vertical` together), all three elements finally moved to the middle.
