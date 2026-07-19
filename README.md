@@ -15,9 +15,15 @@ three UI elements:
 | Plain Text (EditText) | `nameText`| Hint = "Enter your name"     |
 | TextView       | `textGreeting`   | Intentionally has no text    |
 
-## Screenshot
+## Screenshots
+
+**Layout preview:**
 
 ![App layout preview](app/screenshot.png)
+
+**Component Tree (three objects + IDs):**
+
+![Component Tree](app/component-tree.png)
 
 ## Project setup
 
@@ -43,3 +49,8 @@ centering) are in the [`notes/`](notes/) folder.
 
 The full assignment rubric this project satisfies is in
 [`REQUIREMENTS.md`](REQUIREMENTS.md).
+
+## Reflection
+
+The written discussion of challenges, initial experience, and questions is in
+[`REFLECTION.md`](REFLECTION.md).
