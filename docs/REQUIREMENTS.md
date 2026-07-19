@@ -39,16 +39,16 @@ _(Add your own reflection here.)_
 
 Some common early challenges:
 - Understanding the difference between the **Component Tree** (structure) and the
-  **preview** — and knowing you have to select the right element to edit it.
+  **preview** - and knowing you have to select the right element to edit it.
 - Learning that `gravity` positions the children **inside** a container, while
   `layout_gravity` positions the element **inside its parent**.
 - Centering content: you select the root **LinearLayout** and set its `gravity`
   to `center` (or check `center_horizontal` + `center_vertical`); leaving
   `bottom` checked keeps it pinned to the bottom.
-- Avoiding **duplicate IDs** — two views cannot share the same ID.
+- Avoiding **duplicate IDs** - two views cannot share the same ID.
 
 ### Initial experience and questions
 _(Add your own reflection here.)_
 
 ### Challenges accessing or using Android Studio
-_(Add your own reflection here — useful for later work in the course.)_
+_(Add your own reflection here - useful for later work in the course.)_
