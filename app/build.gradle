@@ -13,7 +13,7 @@ android {
     defaultConfig {
         applicationId "com.example.android_studio_intro_justin_guida"
         minSdk 34
-        targetSdk 36
+        targetSdk 34
         versionCode 1
         versionName "1.0"
 
