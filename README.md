@@ -42,7 +42,7 @@ flowchart TD
 Centering is set on the **container** (`rootLayout`), not on the button itself:
 
 ```mermaid
-flowchart LR
+flowchart TD
     S["Select rootLayout<br/>in Component Tree"] --> G["Open the 'gravity' attribute"]
     G --> U["Uncheck 'bottom'"]
     U --> C["Check center_horizontal<br/>+ center_vertical"]
