@@ -72,9 +72,3 @@ visually with the editor versus editing the XML directly, and how the different
 layout containers (LinearLayout, ConstraintLayout, etc.) compare for positioning
 elements. I feel much more prepared to access and use Android Studio for the later
 work in this course.
-
-## AI Tool Acknowledgment
-
-I used an AI assistant (Anthropic's Claude) to help format this Word document and
-place the screenshots. The Android Studio project, the layout, and the written
-discussion of my challenges are my own work.
