@@ -6,11 +6,11 @@
 
 **Layout Editor — activity_main.xml (Button, Plain Text, TextView):**
 
-![App layout preview](app/screenshot.png)
+![App layout preview](images/layout-preview.png)
 
 **Component Tree — the three objects and their IDs:**
 
-![Component Tree](app/component-tree.png)
+![Component Tree](images/component-tree.png)
 
 ## Discussion of Challenges (200+ words)
 

@@ -19,11 +19,41 @@ three UI elements:
 
 **Layout preview:**
 
-![App layout preview](app/screenshot.png)
+![App layout preview](docs/images/layout-preview.png)
 
 **Component Tree (three objects + IDs):**
 
-![Component Tree](app/component-tree.png)
+![Component Tree](docs/images/component-tree.png)
+
+## Component Tree hierarchy
+
+How the three objects nest inside the root container:
+
+```mermaid
+flowchart TD
+    A["rootLayout<br/>(LinearLayout · vertical)"]
+    A --> B["buttonSayHello<br/>Button · text = 'Say Hello'"]
+    A --> C["nameText<br/>Plain Text / EditText"]
+    A --> D["textGreeting<br/>TextView · no text"]
+```
+
+## How the button was centered
+
+Centering is set on the **container** (`rootLayout`), not on the button itself:
+
+```mermaid
+flowchart LR
+    S["Select rootLayout<br/>in Component Tree"] --> G["Open the 'gravity' attribute"]
+    G --> U["Uncheck 'bottom'"]
+    U --> C["Check center_horizontal<br/>+ center_vertical"]
+    C --> R["All 3 children<br/>sit in the middle"]
+```
+
+Key idea:
+- **`gravity`** on `rootLayout` → positions the children **inside** the container (used here).
+- **`layout_gravity`** → would position an element inside **its** parent.
+- The button was also shrunk from full width by setting its
+  **`layout_width` = `wrap_content`** (instead of `match_parent`).
 
 ## Project setup
 
@@ -48,9 +78,10 @@ centering) are in the [`notes/`](notes/) folder.
 ## Requirements
 
 The full assignment rubric this project satisfies is in
-[`REQUIREMENTS.md`](REQUIREMENTS.md).
+[`docs/REQUIREMENTS.md`](docs/REQUIREMENTS.md).
 
 ## Reflection
 
 The written discussion of challenges, initial experience, and questions is in
-[`REFLECTION.md`](REFLECTION.md).
+[`docs/REFLECTION.md`](docs/REFLECTION.md). A ready-to-submit Word version is at
+[`docs/Android_Studio_Assignment_Justin_Guida.docx`](docs/Android_Studio_Assignment_Justin_Guida.docx).
