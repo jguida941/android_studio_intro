@@ -1,49 +1,80 @@
-# Android Studio: Reflection and Challenges
+# Introduction to Android Studio: Layout Editor Assignment
 
 **Justin Guida**
 
-## Screenshots
+## Layout Editor: activity_main.xml
 
-**Layout Editor, activity_main.xml (Button, Plain Text, TextView):**
+The layout contains three objects: a Button (buttonSayHello, text "Say Hello"),
+a Plain Text / EditText (nameText), and a TextView (textGreeting) with no text.
+All three are children of a vertical LinearLayout (rootLayout), centered on the
+screen.
 
-![App layout preview](images/layout-preview.png)
+![Layout Editor for activity_main.xml](images/layout-editor-overview.png)
 
-**Component Tree, the three objects and their IDs:**
+_Figure 1. Layout Editor for activity_main.xml. The Component Tree (lower left)
+lists all three objects: buttonSayHello, nameText (Plain Text), and textGreeting.
+The design and blueprint views show the "Say Hello" button, the plain-text field,
+and the empty TextView._
 
-![Component Tree](images/component-tree.png)
+## Element Identification (IDs and Attributes)
 
-## Discussion of Challenges (200+ words)
+Each element was given a relevant ID and its text set according to the
+instructions. The screenshots below show each object selected in the Component
+Tree with its Attributes panel open, confirming the ID and text values.
 
-My initial experience with Android Studio was a mix of curiosity and
-frustration, which I think is normal when learning a brand new tool. Setting the
-project up was straightforward once I remembered to choose the **No Activity**
-option so that I could select **Java** as the language, but the first-time build
-did take several minutes while the environment downloaded and configured its
-dependencies. Watching the Build tab at the bottom of the screen helped me
-confirm it was actually working and not frozen.
+![Button selected](images/element-button.png)
 
-The biggest challenge I ran into was **getting the button centered in the middle
-of the screen**. At first nothing I did seemed to move it. I eventually learned
-that centering is not done on the button itself, you have to select the root
-**LinearLayout** in the Component Tree and change its **gravity** value. Once I
-unchecked `bottom` and set `gravity` to `center` (or checked `center_horizontal`
-and `center_vertical` together), all three elements finally moved to the middle.
-Understanding the difference between `gravity` (which positions the children
-inside a container) and `layout_gravity` (which positions an element inside its
-parent) was the key insight that made this click.
+_Figure 2. Button selected. id = buttonSayHello, text = @string/say_hello
+("Say Hello"), layout_width = wrap_content._
 
-My second challenge was that the **button stretched across the entire width of
-the screen** instead of only being as wide as its text. I fixed this by changing
-the button's `layout_width` from `match_parent` to **`wrap_content`**, which
-tells the button to only take up as much space as its "Say Hello" label needs.
-Along the way I also accidentally created a **duplicate ID** by naming two views
-`rootLayout`, and I had to rename the Plain Text field back to `nameText` to
-clear the error, since two views cannot share the same ID.
+![Plain Text field selected](images/element-nametext.png)
+
+_Figure 3. Plain Text field selected (EditText). id = nameText, with a hint of
+"Enter your name."_
+
+![TextView selected](images/element-textgreeting.png)
+
+_Figure 4. TextView selected. id = textGreeting, with all text removed as
+required._
+
+## Discussion of Challenges
+
+My initial experience with Android Studio was a mix of curiosity and frustration,
+which I think is normal when learning a brand-new tool. Setting the project up was
+straightforward once I followed the instructions on the page, I remembered to
+choose the No Activity option so that I could select Java as the language, the
+first-time build didn't take several minutes which was nice I believe that was due
+to my Apple M4 which was quick.
+
+The biggest challenge I encountered was centering the button on the screen. I
+wanted the interface to look more balanced, but at first nothing I changed seemed
+to move it. I eventually realized that, because I wanted to center all three
+elements together, I needed to select the root LinearLayout in the Component Tree
+and change its gravity value. After removing the bottom setting and using center,
+or combining center_horizontal and center_vertical, the button, Plain Text field,
+and TextView moved to the middle of the screen. Understanding the difference
+between gravity, which positions child views inside a container, and
+layout_gravity, which positions an individual view within its parent, was the key
+concept that made this process clearer.
+
+My second challenge was that the button stretched across the entire width of the
+screen instead of fitting around its text. I corrected this by changing the
+button's layout_width from match_parent to wrap_content, which made it only as
+wide as the "Say Hello" label required. I also accidentally created a duplicate ID
+by assigning rootLayout to both the root layout and the Plain Text field. I fixed
+the error by changing the Plain Text field's ID back to nameText, since every view
+in the same layout must have a unique ID.
 
 Overall, once I understood that I had to select the correct element in the
-Component Tree before editing its attributes, the Layout Editor started to make
-a lot more sense. My main remaining question is when it is better to build a
-layout visually with the editor versus editing the XML directly, and how the
-different layout containers (LinearLayout, ConstraintLayout, etc.) compare for
-positioning elements. I feel much more prepared to access and use Android Studio
-for the later work in this course.
+Component Tree before editing its attributes, the Layout Editor started to make a
+lot more sense. My main remaining question is when it is better to build a layout
+visually with the editor versus editing the XML directly, and how the different
+layout containers (LinearLayout, ConstraintLayout, etc.) compare for positioning
+elements. I feel much more prepared to access and use Android Studio for the later
+work in this course.
+
+## AI Tool Acknowledgment
+
+I used an AI assistant (Anthropic's Claude) to help format this Word document and
+place the screenshots. The Android Studio project, the layout, and the written
+discussion of my challenges are my own work.
